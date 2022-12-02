@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/callbackStyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--to add css style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" 
+    integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <!--to add bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" 
+    integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+
+</head>
+<body>
+    <section class="header">
+      <nav>
+        <div class="logo">
+            <a href="/home"><img src="/css/logo.jpg" class="logo"alt="logo"></a>
+            <label class="user">{{name}}</label>
+        </div>
+      </nav>
+        <div class="heading">
+          <h3>Richard's Wine And Rum Cakes </h3>  
+        </div>      
+     </section>
+     <section class="container">
+        <h3>Welcome Back, <b>{{name}}</b></h3><br>
+        {{!-- <p>Your cake order was successfully placed, we have forwarded your bill receipt on your entered email id.<br> 
+        The order will be delivered in 4-5 business days.<br> 
+        Hope that you savour the taste and order again from our website.</p> --}}
+        <p>Your cake order was successfully placed, we have forwarded an order confirmation mail to your registered email id.
+        <br>The order will be delivered in 4-5 business days.<br>
+        Hope that you savour the taste and order again from our website. </p>
+
+        <div>
+            <button type="button" class="btn" onclick="home()"><label class="lbl">Home Page</label></button>
+            <button type="button" class="btn" onclick="mail()"><label class="lbl">Bill receipt</label></button>
+        </div>     
+        </section>
+        <script>
+            function home(){
+                //req.session.cart={};
+                location.href="/home";
+            }
+            function mail(){
+                location.href="/bill";
+            }
+            
+    </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/forgotOTP.css">
+    <title>Register</title>
+
+    <!--to add font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--to add css style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    
+    </head>
+<body>
+    <div class="container container-otp"> 
+
+        <div class="title title-otp">RICHARDS WINE AND RUM CAKE</div>
+        <form action="/verifyForgottenOtp" method="post">
+        <div class="heading heading-otp">OTP sent on your registered email-id:</div>
+
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Your email-id</span>
+                <input type="text" class="input" value="{{email}}" name="email" readonly>
+            </div>
+            <div class="input-box">
+                <span class="details">Enter OTP here</span>
+                <input type="text" class="input" placeholder="enter otp" name="otp" required>
+            </div>
+        </div>
+
+        <div class="button-otp"> 
+             <input type="submit" value="VERIFY">
+        </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

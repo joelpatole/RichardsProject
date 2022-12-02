@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>About Us Section</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/aboutStyle.css'>
+    <script src='main.js'></script>
+
+     <!--to add font style -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+     <!--to add css style -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+
+     <!--to add bootstrap icons-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+     
+</head>
+<body>
+
+    <section class="header">
+      <nav>
+            <a href="/home"><img src="/css/logo.jpg" class="logo" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!--to add cross closing icon-->
+                <i class="bi bi-x" onclick="hideMenu()"></i>
+                <ul>
+                  {{# if name}}
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="/cart">CART</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                    {{ else }}
+                    <li><a href="/registration">NEW REGISTER</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                  {{/if}}
+                </ul>
+            </div>
+            <i class="bi bi-list" onclick="showMenu()"></i>
+        </nav>
+        <div class="heading">
+          <h3>Richard's Wine And Rum Cakes </h3>  
+        </div>      
+     </section>
+
+    <div class="section">
+       <div class=" container">
+          <div class="content-section">
+           
+              <div class="title">
+                    <h1>About Us</h1>
+          
+              </div>
+              <div class="content">
+
+                <h3>#Feel The Richness </h3>
+                <p>  {{name}} Cakes that were introduced to this world were plain cakes, people enjoyed eating them, 
+                  then they added cream and discovered cream cakes. People now are bored of having cream cakes, 
+                  therefore we reintroduced and reinvented plain cakes via adding more than 10 flavors to it. 
+                  We guarantee the best authentic flavors, we guarantee the best spongy wine and rum cakes that 
+                  you will ever encounter in your life.
+
+                    We provide flavors like cranberry, blueberry, plum, mixed fruit, strawberry, cherry. 
+                    We also provide plain cakes, walnut cakes, choco walnut cakes, mixed fruit cakes with 
+                   No wine and rum (zero alcohol).
+                    
+                    we dry our fruits and we perform a secret recipe on it, for the flavor you choose. 
+                    Our moto is to make you feel the richness. 
+                </p>
+                
+                <!--<div class="image-section">
+                  <img src="/Users/Joel/VSCode_workspace/ExperimentRichardsWineAndRumCakes/pic1.jpg">
+              </div>-->
+                <div class="button">
+                    <a href="/menu">Order Now</a>
+                </div>
+
+                <div class="social">
+                  <a href="https://www.facebook.com/Richards-wine-cakes-rum-cakes-190578039140727/" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/richards-wine-and-rum-cakes/" target="_blank"><s class="bi bi-instagram"></s></a>
+                  <a href="https://www.instagram.com/richards-wine-and-rum-cakes/" target="_blank"><d class="bi bi-whatsapp"></d></a>
+                </div><!-- -->
+               
+          </div>
+          
+       </div>
+    </div>  
+  </div>
+  <script>
+        //Javascript for toggle menu
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

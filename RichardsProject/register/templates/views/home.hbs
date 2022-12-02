@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/css/homeStyle.css">
+
+    <!--to add font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--to add css style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <!--to add bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/home"><img src="/css/logo.jpg" class="logo"alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <!--to add cross closing icon-->
+                <i class="bi bi-x" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/registration">NEW REGISTER</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/aboutUs">ABOUT</a></li>
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="bi bi-list" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Welcome to Richard's Cakes</h1>
+            <p>Bored of having cream cakes? Try out our various wine, rum and plain cakes.<br>
+            Enhancing your love for cakes.. Feel the richness...!
+                </p>
+                <a href="/contact" class="hero-btn">Contact us to know more</a>
+
+        </div>
+    </section>
+
+    <!-- Call to action-->
+    <section class="cta">
+        <h1>Sign Up, to order now from our website,<br> and try our available flavours..!</h1>
+        <a href="/registration" class="hero-btn">SIGN-UP</a>
+    </section>
+
+    <!--Menu-->
+    <section class="menu">
+        <h1>Menu We Offer</h1>
+        <p>Our motto is to provide you with the most authentic and appetizing tastes through our cakes!</p>
+
+        <div class="row">
+            <div class="menu-col-1">
+                <h3>Wine Cakes</h3>
+                <p>We provide five flavours in this category. 
+                    The fruits used are firstly hand picked from the 
+                    market, sun dried to prevent them from spoiling while
+                    being stored.These fruits are then dipped in an authentic 
+                    Wine over a period of time to absorb the final taste we serve..</p>
+            </div>
+            <div class="menu-col-2">
+                <h3>Plain Cakes</h3>
+                <p>These are non-alcoholic cakes. The fruits used are firstly hand picked from the 
+                    market, sun dried to prevent them from spoiling while
+                    being stored. A secret recipe is performed on these fruits 
+                    which makes the cake juicy and spongy..</p>
+            </div>
+            <div class="menu-col-3">
+                <h3>Rum Cakes</h3>
+                <p>We provide five flavours in this category. 
+                    The fruits used are firstly hand picked from the 
+                    market, sun dried to prevent them from spoiling while
+                    being stored.These fruits are then dipped in a clear Rum
+                    over a period of time to absorb the final taste we serve..</p>
+            </div>
+        </div>
+    </section>
+
+    <!--orders-->
+    <section class="orders">
+        <h1>Our Most Loved Orders</h1>
+        <p>Based On Our Customer Reviews</p>
+        <div class="row">
+            <div class="order-col">
+                <img src="/css/pic1.jpg">
+                <div class="layer">
+                    <h3>BlueBerry Rum Cake</h3>
+                </div>
+            </div>
+            <div class="order-col">
+                <img src="/css/pic2.jpg">
+                <div class="layer">
+                    <h3>Cranberry Wine Cake</h3>
+                </div>
+            </div>
+            <div class="order-col">
+                <img src="/css/pic4.jpg">
+                <div class="layer">
+                    <h3>Plum Rum Cake</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Item description-->
+    <section class="desc">
+        <h1>Order Description</h1>
+        <p>This is a brief description of few of our cakes.</p>
+
+        <div class="row">
+            <div class="desc-col">
+                <img src="/css/Bg1.jpg">
+                <h3>Cranberry Wine Cake</h3>
+                <p>Sun dried cranberry's dipped in most authentic Wine.</p>
+            </div>
+            <div class="desc-col">
+                <img src="/css/ChocoWalnutCake.jpeg">
+                <h3>Choco-Walnut Cake</h3>
+                <p>Non-alcoholic cake, with the goodness of Walnuts and milk chocolate.</p>
+            </div>
+            <div class="desc-col">
+                <img src="/css/image4.jpeg">
+                <h3>Blueberry Rum Cake</h3>
+                <p>Luscious blueberry's dipped in strong Rum flavour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--testimonials-->
+    <section class="testimonial">
+        <h1>Customer Reviews</h1>
+        <p>Reviews from our latest orders.</p>
+        <div class="row">
+            <div class="test-col">
+                <div class="review">
+                    <p>Ordered a cherry wine cake through this website.
+                        Thought that they were going to use artificial cherries, 
+                        but turned out, they are true to their words. 
+                        Thankyou Richards cake for delivering the cake on time.
+                        The cake was delicious.</p>
+                    <h3>Bhavesh Khandelwal</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+            </div>
+            <div class="test-col">
+                <div class="review">
+                    <p>Tried rum plum cake for the first time.
+                        The flavour was unique, quantity of fruit used was fullfilling.
+                        Not like ordinary cake shops. Really a good experience.</p>
+                    <h3>Shubhankar Patti</h3>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action-->
+    <section class="ctb">
+        <h1>Login, to order now from our website.<br>Follow us on social media to keep updated with our latest flavours..!</h1>
+        <a href="/login" class="hero-btn">LOGIN</a>
+    </section>
+
+    <!--Footer-->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p> We guarantee the best authentic flavors, we guarantee the best spongy wine and rum cakes that 
+            you will ever encounter in your life.
+            We provide flavors like cranberry, blueberry, plum, mixed fruit, strawberry, cherry. 
+            We also provide plain cakes, walnut cakes, choco walnut cakes, mixed fruit cakes with 
+            No wine and rum (zero alcohol).</p>
+            <div class="icons">
+                <a href="https://www.facebook.com/Richards-wine-cakes-rum-cakes-190578039140727/" target="_blank" ><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/richards_wine_and_rum_cakes/" target="_blank"><s class="bi bi-instagram"></s></a>
+                <a href="#" target="_blank"><d class="bi bi-whatsapp"></d></a>
+            </div>
+    </section>
+    
+    <script>
+        //Javascript for toggle menu
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

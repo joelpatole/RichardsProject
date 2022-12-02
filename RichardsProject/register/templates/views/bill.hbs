@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="/css/bill.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" 
+    integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+<body>
+    <div id="invoice">
+    <section class="header">
+      <nav>
+        <div class="logo">
+            <a href="/home"><img src="/css/logo.jpg" class="logo"alt="logo"></a>
+            <label class="user">{{name}}</label>
+        </div>
+        </nav>
+        <div class="heading">
+          <h3>Richard's Wine And Rum Cakes </h3>  
+        </div>      
+     </section>
+    <section class="body">
+    <h3>Your order details are listed below-</h3>
+    <div class="user-details">
+        <div class="content">
+        <label class="name">Name: </label><label>{{name}}</label><br>
+        <label class="email">Email-ID: </label><label>{{email}}</label><br>
+        <label class="add">Address: </label><label>{{address}}</label><br><br>
+        </div>
+    </div>
+    <section>
+        <div class="order-details">
+            
+            <h4>Order Details-</h4>
+            <table>
+                <tr>
+                    <th class="qty">Quantity</th>
+                    <th class="nm">Name</th>
+                    <th class="pr">Price</th>
+                </tr>
+                {{# each products }}
+                <tr>
+                    <td>{{ this.qty }}</td>
+                    <td>{{ this.item.title }}</td>
+                    <td>Rs.{{ this.price }}</td>
+                </tr>
+                 {{/each}}
+            </table><br>
+           
+        </div>
+
+        <div class="total">
+            <label>Total Price-</label><label>Rs.{{totalPrice}}</label><br><br>
+        </div>
+    </section>
+    <section class="footer">
+        <div>
+            <p>We hope you savour the taste and order again from our website..!</p>
+            <p>Please do provide a review through feedback section on our official website or on our social media handles, so that we can improve our service..</p>
+            <p>Contact- +91 7040856403</p>
+        </div>
+    </section>
+    
+    </div>
+    <div class="download">
+        <button type="button" id="download">Download</button>
+        <button type="button" onclick="home()">Back To Home</button>
+    </div>
+    
+    </section>
+    <script>
+        window.onload = function(){
+            document.getElementById("download").addEventListener("click",()=>{
+                const invoice = this.document.getElementById("invoice")
+                console.log(invoice);
+                var opt = {
+                    margin: 1,
+                    filename: 'RichardsCakes@bill.pdf',
+                    jsPDF: { unit: 'in',format: 'letter',orientation: 'portrait'}
+                };
+                html2pdf().from(invoice).set(opt).save();
+            })
+        }
+        function home(){
+            location.href="/home";
+        }
+    </script>

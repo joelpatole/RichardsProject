@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /*background-color:#fff3f3*/
+ 
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+}
+.header{
+    /*min-height: 100vh;*/
+    min-height:200px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(plum1.jpeg ) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display:flex;
+    padding: 1% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #a52a2a;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.heading{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.heading h3{
+    font-size: 250%;
+}
+nav .bi{
+    display: none;
+}
+
+.content{
+    max-width: max-content;
+    max-height: max-content;
+}
+
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 1px;
+}
+.content-section{
+    float: left;
+    width: 70%;
+    
+}
+.image-section{
+    float: left;
+    width: 30%;
+}
+
+.content-section .title{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 20px;
+    color: #a52a2a;
+	font-family:'Poppins', Times, serif ;
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color: #a52a2a;
+    
+
+}
+
+.content-section .content p{
+    margin-top: 10px;
+    font-family:'Poppins', Times, serif ;
+    font-size: 18px;
+    line-height: 1.5;
+    color : #1f1818;
+    width: 100%;
+
+}
+
+.content-section .content .button{
+    margin-top: 30px;
+} 
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    margin-bottom: 0%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.content-section .content .button a:hover{
+    background-color: #a52a2a ;
+    color: #fff;
+
+}
+
+.social{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.social .social-text{
+    font: bold;
+    color:black;
+    font-weight: 600;
+    
+}
+
+ .social i{
+    color: blue;
+    font-size: 40px;
+    padding: 0px 10px;
+}
+ .social i:hover{
+    color: steelblue;
+    font-size: 42px;
+    padding: 0px 10px;
+}
+
+ .social s{
+    color: purple;
+    font-size: 40px;
+    padding: 0px 10px;
+}
+ .social s:hover{
+    color:plum;
+    font-size: 42px;
+    padding: 0px 10px;
+}
+
+ .social d{
+    color: green;
+    font-size: 40px;
+    padding: 0px 10px;
+}
+ .social d:hover{
+    color: lightgreen;
+    font-size: 42px;
+    padding: 0px 10px;
+}
+
+@media(max-width: 700px){
+
+    .header h3{
+        font-size: 30px;
+        padding-top: 50px;
+        
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    nav .logo{
+        height: 40px;
+        width: 40px;
+    }
+    .nav-links{
+        position: absolute;
+        background: #3a1313;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .bi{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 1px;
+    }
+
+    .content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+        
+    }
+    .image-section{
+        float: left;
+        width: 30%;
+    }
+
+.content-section .title{
+    text-align: center;
+    font-size: 19px;
+}
+
+.content-section .content .button{
+    text-align: center;
+
+}
+.content-section .content .social{
+   margin-left: 20%;
+}
+/* .social{
+    margin-left: 28;
+} */
+
+}
